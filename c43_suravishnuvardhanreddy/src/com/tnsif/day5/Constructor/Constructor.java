@@ -1,10 +1,22 @@
-package com.tnsif.day3.Oops;
+package com.tnsif.day5.Constructor;
 
-public class Encapsulation {
+public class Constructor {
 	String name;//data members &instance variable
 	int age;
 	String dept;
-
+	
+	//default constructor
+	public Constructor() {
+		System.err.println("default constructor");
+	}
+	public Constructor(String ConstructorName, int ConstructorAge, String ConstructorDept) {
+		System.out.println("Parameter Constructor");
+		this.name = ConstructorName;
+		this.age = ConstructorAge;
+		this.dept = ConstructorDept;
+		
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -30,13 +42,6 @@ public class Encapsulation {
 	
 	
 	public static void main(String[] args) {
-		Encapsulation obj=new Encapsulation();
-		obj.setName("vishnu");
-		obj.setAge(21);
-		obj.setDept("ECE");
-		System.out.println(obj.age);
-	}
-	
-	
-
-}
+		Constructor obj=new Constructor("Vishnu",21,"ECE");
+		System.out.println(obj.toString());
+	}}
